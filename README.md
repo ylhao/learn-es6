@@ -4,6 +4,8 @@
 
 ## git 基本操作
 ``` bash
+# 首先在 github 上新建一个仓库，并用一个 README.md 初始化
+
 # 添加远程仓库
 git remote add origin https://github.com/ylhao/learn-es6
 git remote show
@@ -20,4 +22,12 @@ git remote show
 # git config --list
 # git config user.name
 # git config user.email
+
+# 首先拉远程仓库
+git pull origin master --allow-unrelated-histories
+
+# 手动解决冲突问题（如果有的话）
+
+# 向远程仓库推送
+git push origin master
 ```
