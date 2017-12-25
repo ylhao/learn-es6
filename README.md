@@ -1,7 +1,6 @@
 ## 添加 .gitignore 文件
-[参考链接1](https://blog.haohtml.com/archives/15965)
-
-[参考链接2](https://git-scm.com/docs/gitignore)
+- [参考链接1](https://blog.haohtml.com/archives/15965)
+- [参考链接2](https://git-scm.com/docs/gitignore)
 
 ## git 基本操作
 ``` shell
