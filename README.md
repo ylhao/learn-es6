@@ -3,7 +3,7 @@
 - [参考链接2](https://git-scm.com/docs/gitignore)
 
 ## git 基本操作
-``` shell
+``` bash
 # 添加远程仓库
 git remote add origin https://github.com/ylhao/learn-es6
 git remote show
