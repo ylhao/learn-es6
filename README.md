@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## 添加 .gitignore 文件
 [参考链接1](https://blog.haohtml.com/archives/15965)
 [参考链接2](https://git-scm.com/docs/gitignore)
@@ -21,3 +22,6 @@ git remote show
 # git config user.name
 # git config user.email
 ```
+=======
+# learn-es6
+>>>>>>> 277be58b1637f536ff4b5329fdea942d0fe09ac9
