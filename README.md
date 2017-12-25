@@ -31,3 +31,5 @@ git pull origin master --allow-unrelated-histories
 # 向远程仓库推送
 git push origin master
 ```
+
+## git 补充
