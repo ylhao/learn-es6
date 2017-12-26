@@ -33,6 +33,12 @@ git pull origin master --allow-unrelated-histories
 
 # 向远程仓库推送
 git push origin master
+
+# 查看日志
+git log -3
+
+# 回滚，不推荐
+git reset --hard hash值(部分即可)
 ```
 
 ## git 补充
