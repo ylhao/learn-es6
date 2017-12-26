@@ -5,7 +5,7 @@ npm 包管理工具随 node 一起安装。不需要单独安装。
 ## npm 常用操作
 ``` shell
 # 更新
-npm install npm@latest -g #latest: 最新版本, -g: 全局安装
+npm install npm@latest -global #latest: 最新版本, -global: 全局安装
 
 # 查看版本
 npm -v
@@ -15,15 +15,15 @@ npm init
 npm init -y
 
 # 查看全局安装了哪些模块
-npm list -g
-npm list -g depth 0
+npm list -global
+npm list -global -depth 0
 
 # 查看本地安装了哪些模块
 npm list
 npm list depth 0
 
 # 全局安装
-npm install -g <package name>
+npm install -global <package name>
 
 # 本地安装
 npm install <package name>
@@ -37,6 +37,18 @@ npm install
 
 # 卸载模块，同时也会在package.json中移除
 npm uninstall <package name>
+
+# 更新模块
+npm update <package name>
+
+# 搜索模块
+npm search <package name>
+
+# 查看特定的模块的信息
+npm info -global <package name>
+npm list -global <package name>
+npm info <package name> # 详细信息
+npm list <package name> # 简略信息
 ```
 
 ## --save 和 --save-dev
