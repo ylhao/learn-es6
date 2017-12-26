@@ -1,5 +1,5 @@
 ## 添加 .gitignore 文件
-- [.gitignore 学习笔记](./gitignore.md)
+- [.gitignore 学习笔记](./doc/gitignore.md)
 - [GitHub提供的 .gitignore文件](https://github.com/github/gitignore)
 - [参考链接1](https://blog.haohtml.com/archives/15965)
 - [参考链接2](https://git-scm.com/docs/gitignore)
@@ -44,4 +44,4 @@ git reset --hard hash值(部分即可)
 ## git 补充
 
 ## npm 包管理工具
-[npm 章节学习](./npm包管理工具学习.md)
+[npm 章节学习](./doc/npm包管理工具学习.md)
