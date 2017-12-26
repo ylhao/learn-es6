@@ -1,6 +1,9 @@
 ## 添加 .gitignore 文件
+- [.gitignore 学习笔记](./gitignore.md)
+- [GitHub提供的 .gitignore文件](https://github.com/github/gitignore)
 - [参考链接1](https://blog.haohtml.com/archives/15965)
 - [参考链接2](https://git-scm.com/docs/gitignore)
+- [参考链接3](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000)
 
 ## git 基本操作
 ``` bash

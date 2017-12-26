@@ -1,3 +1,5 @@
 # My configurations:
 node_modules/
 
+test
+!test/
