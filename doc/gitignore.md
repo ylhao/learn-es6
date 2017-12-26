@@ -1,5 +1,11 @@
 使用 git 做代码管理工具时，设置 gitignore 是必不可少的流程，一些系统或者 IDE 会在目录下生成与项目不相关的文件，而这些文件我们不期望被提交到仓库之中。理解 gitignore 的 pattern 规则十分重要。
 
+## 参考教程
+- [GitHub提供的 .gitignore文件](https://github.com/github/gitignore)
+- [参考链接1](https://blog.haohtml.com/archives/15965)
+- [参考链接2](https://git-scm.com/docs/gitignore)
+- [参考链接3](https://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000/0013758404317281e54b6f5375640abbb11e67be4cd49e0000)
+
 ## PATTERN 规则
 - 空行不匹配任何内容，所以可以作为块分隔符
 - “#”开头表示注释
