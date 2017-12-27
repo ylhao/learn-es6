@@ -62,4 +62,52 @@ console.log(arr3.find(function(value,index,arr){
     return value > 5;
 }));
 
-console.log('test10');
+let arr_fill =[0,1,2,3,4,5,6,7,8,9,10];
+// 要填充的值，填充起始位置，填充到的位置（不包括）
+arr_fill.fill('jspang',2,5);
+console.log(arr_fill);
+
+let arr_of=['jspang','技术胖','大胖逼逼叨']
+
+for (let item of arr_of){
+   console.log(item);
+}
+
+for (let index of arr_of.keys()){
+    console.log(index);
+}
+
+for (let [index, item] of arr_of.entries()){
+    console.log(index, item);
+}
+
+// entries()实例方式生成的是Iterator形式的数组，那这种形式的好处就是可以让我们在需要时用next()手动跳转到下一个值。
+
+let arr=['jspang','技术胖','大胖逼逼叨']
+let list=arr.entries();
+console.log(list.next().value);
+console.log(list.next().value);
+console.log(list.next().value);
+
+// 主动抛出错误
+function add(a,b=1){
+   
+    if(a == 0){
+        throw new Error('This is error')
+    }
+     return a+b;
+}
+ 
+// console.log(add(0));
+
+// ES5中，我们经常用严格模式来编程，但是必须写在代码最上边，相当于全局使用。在ES6中我们可以写在函数体中，相当于针对函数来使用。
+// 但是再ES6中如果你使用了默认值，再使用严谨模式的话，就会有冲突。
+function add(a,b=1){
+    'use strict'
+    if(a == 0){
+        throw new Error('This is error');
+    }
+     return a+b;
+}
+ 
+console.log(add(1));
