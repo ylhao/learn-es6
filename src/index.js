@@ -60,4 +60,6 @@ let arr3=[1,2,3,8,5,6,7,4,9];
 // arr: 当前数组
 console.log(arr3.find(function(value,index,arr){
     return value > 5;
-}))
+}));
+
+console.log('test10');
