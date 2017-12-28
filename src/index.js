@@ -240,3 +240,90 @@ pro.name = 'ylhao';
 console.log(pro.name);
 
 // 16节 promise对象的使用
+
+let state=1;
+ 
+function step1(resolve,reject){
+    console.log('1.开始-洗菜做饭');
+    if(state==1){
+        resolve('洗菜做饭--完成');
+    }else{
+        reject('洗菜做饭--出错');
+    }
+}
+ 
+function step2(resolve,reject){
+    console.log('2.开始-坐下来吃饭');
+    if(state==1){
+        resolve('坐下来吃饭--完成');
+    }else{
+        reject('坐下来吃饭--出错');
+    }
+}
+ 
+ 
+function step3(resolve,reject){
+    console.log('3.开始-收拾桌子洗完');
+     if(state==1){
+        resolve('收拾桌子洗完--完成');
+    }else{
+        reject('收拾桌子洗完--出错');
+    }
+}
+
+// 如果step状态reslove，那么执行匿名函数中的代码，否则，直接打印错误信息（reject返回的信息）然后程序运行结束
+// new Promise(step1).then(function(val){
+//     console.log(val);
+//     return new Promise(step2);
+// }).then(function(val){
+//     console.log(val);
+//     return new Promise(step3);
+// }).then(function(val){
+//     console.log(val);
+//     return val;
+// });
+
+// 类
+
+class Coder{
+    name(val){
+        console.log(val);
+        return val;
+    }
+    skill(val){
+        console.log(this.a);
+        console.log(this.name('jspang')+':'+'Skill:'+val);
+    }
+ 
+    constructor(a,b){
+        this.a=a;
+        this.b=b;
+    }
+ 
+    add(){
+        return this.a+this.b;
+    }
+}
+ 
+let jspang111=new Coder(1,2);
+console.log(jspang111.add());
+console.log(jspang111.a);
+
+class htmler extends Coder{
+    
+}
+    
+let pang111=new htmler;
+pang111.name('技术胖');
+
+// 模块化
+
+import {testtest} from './temp.js';
+console.log(testtest);
+
+import {test111} from './temp.js';
+console.log(test111);
+
+// 默认default
+import ccc111 from './temp.js';
+console.log(ccc111);

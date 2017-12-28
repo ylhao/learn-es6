@@ -72,7 +72,21 @@
 
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _temp = __webpack_require__(1);
+
+var _temp2 = _interopRequireDefault(_temp);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
@@ -409,6 +423,146 @@ pro.name = 'ylhao';
 console.log(pro.name);
 
 // 16节 promise对象的使用
+
+var state = 1;
+
+function step1(resolve, reject) {
+    console.log('1.开始-洗菜做饭');
+    if (state == 1) {
+        resolve('洗菜做饭--完成');
+    } else {
+        reject('洗菜做饭--出错');
+    }
+}
+
+function step2(resolve, reject) {
+    console.log('2.开始-坐下来吃饭');
+    if (state == 1) {
+        resolve('坐下来吃饭--完成');
+    } else {
+        reject('坐下来吃饭--出错');
+    }
+}
+
+function step3(resolve, reject) {
+    console.log('3.开始-收拾桌子洗完');
+    if (state == 1) {
+        resolve('收拾桌子洗完--完成');
+    } else {
+        reject('收拾桌子洗完--出错');
+    }
+}
+
+// 如果step状态reslove，那么执行匿名函数中的代码，否则，直接打印错误信息（reject返回的信息）然后程序运行结束
+// new Promise(step1).then(function(val){
+//     console.log(val);
+//     return new Promise(step2);
+// }).then(function(val){
+//     console.log(val);
+//     return new Promise(step3);
+// }).then(function(val){
+//     console.log(val);
+//     return val;
+// });
+
+// 类
+
+var Coder = function () {
+    _createClass(Coder, [{
+        key: 'name',
+        value: function name(val) {
+            console.log(val);
+            return val;
+        }
+    }, {
+        key: 'skill',
+        value: function skill(val) {
+            console.log(this.a);
+            console.log(this.name('jspang') + ':' + 'Skill:' + val);
+        }
+    }]);
+
+    function Coder(a, b) {
+        _classCallCheck(this, Coder);
+
+        this.a = a;
+        this.b = b;
+    }
+
+    _createClass(Coder, [{
+        key: 'add',
+        value: function add() {
+            return this.a + this.b;
+        }
+    }]);
+
+    return Coder;
+}();
+
+var jspang111 = new Coder(1, 2);
+console.log(jspang111.add());
+console.log(jspang111.a);
+
+var htmler = function (_Coder) {
+    _inherits(htmler, _Coder);
+
+    function htmler() {
+        _classCallCheck(this, htmler);
+
+        return _possibleConstructorReturn(this, (htmler.__proto__ || Object.getPrototypeOf(htmler)).apply(this, arguments));
+    }
+
+    return htmler;
+}(Coder);
+
+var pang111 = new htmler();
+pang111.name('技术胖');
+
+// 模块化
+
+console.log(_temp.testtest);
+
+console.log(_temp.test111);
+
+// 默认default
+
+console.log(_temp2.default);
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.add111 = add111;
+var testtest = exports.testtest = 'testtest';
+
+var test111 = 'test111';
+var test222 = 'test222';
+var test333 = 'test333';
+
+exports.test111 = test111;
+exports.test222 = test222;
+exports.test333 = test333;
+function add111(a, b) {
+    return a + b;
+}
+
+var aaaa = 'aaaa';
+var bbbb = 'bbbb';
+var cccc = 'cccc';
+
+exports.aaaaa = aaaa;
+exports.bbbbb = bbbb;
+exports.ccccc = cccc;
+
+
+var zzz = 'zzzz';
+exports.default = zzz;
 
 /***/ })
 /******/ ]);
