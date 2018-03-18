@@ -23,3 +23,4 @@ gulp.task('scripts', ()=>{
 gulp.task('watch', () => {
     gulp.watch('src/index.js', ['build']);
  });
+ 
