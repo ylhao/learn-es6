@@ -1,8 +1,8 @@
 # ES6 学习环境
 这里搭建了一个 ES6 的学习环境，其中用到了任务自动化工具 gulp 和 ES6 转码器 Babel。具体的搭建步骤可以参考：
-[1. npm 包管理工具](https://www.jianshu.com/p/626e568aaa5a)
-[2. Babel 转码器](https://www.jianshu.com/p/c55ed0af4b4a)
-[3. gulp 自动化构建工具](https://www.jianshu.com/p/d88c065469e4)
+1. [npm 包管理工具](https://www.jianshu.com/p/626e568aaa5a)
+2. [Babel 转码器](https://www.jianshu.com/p/c55ed0af4b4a)
+3. [gulp 自动化构建工具](https://www.jianshu.com/p/d88c065469e4)
 
 
 #### 使用方法
